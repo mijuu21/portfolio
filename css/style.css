@@ -1,0 +1,389 @@
+/* 전체 스타일 초기화 및 기본 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Pretendard', sans-serif; /* 본문 폰트 설정 */
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Helvetica93-ExtendedBlack', sans-serif; /* 제목 폰트 설정 */
+}
+/* 전체 스타일 초기화 및 기본 설정 f*/
+
+/* 프로그래스 바 스타일 */
+.progress-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: none;
+}
+.progress-wrap .progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  transition: 0.4s;
+}
+/* 프로그래스 바 스타일 f */
+
+/* 네비게이션 바 스타일 */
+header {
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav ul li {
+  margin: 0 30px;
+  mix-blend-mode: difference;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  transition: color 0.3s ease; /* 텍스트 색상 전환 효과를 위한 transition 추가 */
+}
+
+/* 마우스 호버 시 색상 변경 */
+.nav ul li a:hover {
+  color: #18a27d; /* 원하는 호버 시 색상으로 변경 */
+}
+.gnb li {
+  mix-blend-mode: difference;
+}
+
+/* 메뉴를 호버시 바뀌는 색상 */
+.gnb li.active a {
+  color: #0a6268;
+}
+/* 배경이 흰색일때 메뉴를 호버시 바뀌는색상 */
+.nav ul li.active a:hover {
+  color: #f0f; /* 원하는 호버 시 색상으로 변경 */
+}
+/* 네비게이션 바 스타일 f*/
+/* 섹션 스타일 (예시로 home, gradient-bg, about, portfolio, contact) */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home {
+  position: relative; /* video를 포함한 요소가 스택될 수 있도록 relative로 설정 */
+  overflow: hidden; /* video의 내용이 넘칠 경우를 대비해 overflow를 hidden으로 설정 */
+}
+.home video {
+  position: absolute; /* 상위 요소에 대해 절대 위치 지정 */
+  top: 0;
+  left: 0;
+  width: 100%; /* 부모 요소에 대해 100%의 너비를 가지도록 설정 */
+  height: 100%; /* 부모 요소에 대해 100%의 높이를 가지도록 설정 */
+  object-fit: cover; /* 비디오가 부모 요소에 꽉 차게 채워지도록 설정 */
+  z-index: -1; /* 텍스트가 비디오 위에 보이도록 설정 */
+}
+
+.home h1 {
+  position: relative; /* 텍스트가 비디오 위에 겹쳐지도록 상대 위치 지정 */
+  font-size: 148px;
+  color: white;
+  text-align: center;
+  z-index: 1; /* 텍스트가 비디오 위에 보이도록 설정 */
+}
+/* .home {
+  
+  background: url(./img/banner.gif) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+/* .home h1 {
+  font-size: 148px;
+  color: white; 
+  text-align: center;
+} */
+
+.gradient-bg {
+  /* background: linear-gradient(45deg, #004d40, #00796b, #004d40); */
+  background: #fff;
+  color: #0a6268;
+}
+.gradient-bg p {
+  font-size: 50px;
+  font-weight: 300;
+  margin-bottom: 33px;
+}
+.gradient-bg h1 {
+  font-size: 113px;
+  margin-top: 0;
+}
+
+.about {
+  background: #0a6268;
+}
+
+.about h2 {
+  /* color: #0a6268; */
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about ul {
+  /* color: #0a6268; */
+  list-style: none;
+  text-align: left; /* ul 내 텍스트를 왼쪽으로 정렬 */
+}
+.about li {
+  /* color: #0a6268; */
+  margin-bottom: 10px; /* li 요소들 사이에 간격 추가 */
+}
+
+.left,
+.center,
+.right {
+  flex: 1;
+  padding: 25px;
+}
+
+.center img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.center p {
+  /* color: #0a6268; */
+  margin-top: 38px;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.about h3 {
+  /* color: #0a6268; */
+  margin-top: 38px;
+  font-size: 35px;
+  margin-bottom: 43px;
+  text-align: left; /* h3 텍스트를 왼쪽으로 정렬 */
+}
+
+/* portfolio- s */
+/* 컨테이너의 크기를 100%로 설정 */
+.container {
+  width: 100%; /* 너비를 100%로 설정 */
+  height: 100%; /* 높이를 100%로 설정 */
+}
+
+.portfolio {
+  background: #000;
+  /* position: relative; */
+}
+
+.portfolio > div {
+  width: 100vw; /* 뷰포트 너비를 100%로 설정 */
+  height: 100vh; /* 뷰포트 높이를 100%로 설정 */
+}
+.portfolio .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.hero h2 {
+  position: absolute; /* 절대 위치 지정 */
+  width: 100%; /* 너비를 100%로 설정 */
+  top: 50%; /* 상단에서 50% 위치 */
+  left: 50%; /* 좌측에서 50% 위치 */
+  transform: translate(-50%, -50%); /* 중앙 정렬 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  font-weight: 400; /* 폰트 두께 설정 */
+  font-size: 200px; /* 폰트 크기 설정 */
+  color: #fff; /* 폰트 색상을 흰색으로 설정 */
+  transition: 0.4s;
+}
+.portfolio .card-title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 40px;
+  top: 50%;
+}
+
+/* 포트폴리오 부제목 */
+/* .portfolio .card-subtitle {
+  top: calc(50% + 40px);
+  transform: translate(-50%, -50%);
+  font-size: 0.8em;
+} */
+/* 스크롤 가능한 카드의 상대적 위치 설정 */
+.card.scroll {
+  position: relative; /* 상대적 위치 지정 */
+}
+/* 이미지의 위치와 크기 지정 */
+.p-img {
+  position: absolute; /* 절대 위치 지정 */
+  top: 50%; /* 상단에서 50% 위치 */
+  left: 50%; /* 좌측에서 50% 위치 */
+  transform: translate(-50%, -50%); /* 중앙 정렬 */
+}
+.hero.active h2 {
+  opacity: 0;
+}
+
+.btn-portfolio {
+  position: fixed;
+  top: 50%;
+  right: 20%;
+  transform: translateY(-50%);
+  display: none;
+}
+.btn-portfolio.active {
+  display: block;
+}
+/* portfolio f */
+
+/* contact -s  */
+.contact {
+  background: #000;
+}
+.contact h2 {
+  font-size: 93px;
+  margin-bottom: 120px;
+}
+
+.contact-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-content .contact-image,
+.contact-content .contact-info {
+  flex: 1;
+  padding: 20px;
+}
+.contact-content .contact-info {
+  margin-left: 173px;
+}
+
+.contact-content .contact-image img {
+  width: 100%;
+  height: auto;
+}
+
+.contact-content .contact-info ul {
+  list-style: none; /* 불릿 포인트 제거 */
+  padding: 0; /* 기본 패딩 제거 */
+  margin: 0; /* 기본 마진 제거 */
+}
+.contact-content ul li {
+  text-align: left;
+}
+.contact-content ul li strong {
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 6px;
+}
+.contact-content ul li p {
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.contact-content .contact-info li {
+  margin-bottom: 44px; /* 리스트 아이템 간의 간격 추가 */
+  font-size: 30px;
+}
+/* contact -f  */
+
+/* 추가 top버튼 */
+.btn-top {
+  display: none;
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  z-index: 1000;
+  padding: 20px 20px;
+  border: 1px solid #fff;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: 'Cafe24Simplehae';
+}
+.indicator {
+  position: fixed;
+  top: 50%;
+  right: 100px;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* aife */
+  gap: 20px;
+}
+.indicator button {
+  bottom: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.indicator button.on {
+  width: 60px;
+}
+.indicator button b {
+  display: none;
+}
