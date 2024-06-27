@@ -24,6 +24,10 @@ h2,
 h3 {
   font-family: 'Helvetica93-ExtendedBlack', sans-serif; /* 제목 폰트 설정 */
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 /* 전체 스타일 초기화 및 기본 설정 f*/
 
 /* 프로그래스 바 스타일 */
@@ -280,16 +284,92 @@ header {
   opacity: 0;
 }
 
-.btn-portfolio {
+/* portfolio버튼 부분 */
+/* .btn-portfolio {
   position: fixed;
   top: 50%;
   right: 20%;
   transform: translateY(-50%);
   display: none;
 }
+
+.btn-portfolio.active {
+  display: block;
+} */
+/* .btn-portfolio {
+  position: fixed;
+  top: 50%;
+  right: 12%;
+  transform: translateY(-50%);
+  display: none;
+
+  font-size: 16px;
+  font-weight: bold;
+  background: none;
+  width: 160px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fff; 
+  border-radius: 50px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, -webkit-transform;
+} */
+
+/* .btn-portfolio a {
+  color: #fff;
+} */
+
+/* .btn-portfolio:hover,
+.btn-portfolio:focus,
+.btn-portfolio:active {
+  box-shadow: 0 0 20px rgba(127, 200, 9, 1);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+} */
+
+.btn-portfolio {
+  position: fixed;
+  top: 50%;
+  right: 12%;
+  transform: translateY(-50%);
+  display: none;
+  color: #fff;
+  background-color: #444;
+  padding: 20px 30px;
+  border-radius: 10px;
+  flex-direction: column;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 160px;
+  font-size: 16px;
+  font-weight: bold;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, -webkit-transform;
+}
+
+.btn-portfolio:hover {
+  background-color: #fff; /* 이미지 배경과 유사한 색상 */
+  color: #000;
+  box-shadow: 0 0 20px rgba(127, 200, 9, 1);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
 .btn-portfolio.active {
   display: block;
 }
+
 /* portfolio f */
 
 /* contact -s  */
