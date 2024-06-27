@@ -237,3 +237,5 @@ $(function () {
     moveSection(secIdx);
   });
 });
+
+// 바 색상 바꾸기
