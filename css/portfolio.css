@@ -33,13 +33,13 @@ img {
 .hero {
   width: 100vw;
   height: 100vh;
-  background: url(../img/por.png) no-repeat 50% 50%;
+  background: url(../img/por2.png) no-repeat 50% 50%;
   background-size: cover;
 }
 .footer {
   width: 100vw;
   height: 100vh;
-  background: url(../img/pp.jpg) no-repeat 50% 50%;
+  background: url(../img/pore.png) no-repeat 50% 50%;
   background-size: cover;
 }
 

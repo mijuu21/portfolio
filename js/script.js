@@ -1,4 +1,5 @@
 $(function () {
+  // progress-bar s
   gsap.registerPlugin(ScrollTrigger);
   // 대상을 변수에 저장
   const $progressBar = $('.progress-bar');
@@ -11,12 +12,8 @@ $(function () {
   const scrollHeight = docHeight - winHeight;
   // console.log(winHeight, docHeight);
 
-  // 스크롤 이벤트가 발생할 때
   $window.on('scroll', function () {
     const scrollTop = $(this).scrollTop();
-
-    // 스크롤 영역: 문서 크기에서 창 크기를 제외한 나머지--> 비율을 구하는 기준
-    // docHeight - winHeight
 
     // 비율을 구하는 공식: 타켓/컨텍스트(기준)--> 결과값 * 100
     const percent = (scrollTop / (docHeight - winHeight)) * 100 + '%';
@@ -25,21 +22,9 @@ $(function () {
     $progressBar.css('width', percent);
   });
 
-  //  GNB의 색상
-  // window.addEventListener('scroll', function () {
-  //   const sections = document.querySelectorAll('.section');
-  //   const gnb = document.querySelector('.gnb');
+  // progress-bar f
 
-  //   sections.forEach((section) => {
-  //     const rect = section.getBoundingClientRect();
-  //     if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-  //       const sectionId = section.getAttribute('id');
-  //       gnb.className = `gnb ${sectionId}`;
-  //     }
-  //   });
-  // });
-
-  // portfolio
+  // portfolio s
   const contact = document.querySelector('.contact');
   const lastCard = document.querySelector('.card.scroll');
   const pinnedDivs = gsap.utils.toArray('.pinned');
@@ -68,8 +53,7 @@ $(function () {
     gsap.to('#portfolio', {
       scrollTrigger: {
         trigger: '#portfolio',
-        markers: true,
-        // start: '700px top',
+        // markers: true,
         start: `${start} top`,
         end: '90% top',
         toggleClass: {
@@ -96,7 +80,6 @@ $(function () {
   });
 
   const heroH2 = document.querySelector('.hero h2');
-  // gsap.set('.hero h2', { opacity: 1 });
   ScrollTrigger.create({
     trigger: '.portfolio',
     start: 'top top',
@@ -104,47 +87,19 @@ $(function () {
     id: 'title',
     // markers: true,
     scrub: 1,
-    // toggleClass: 'active',
     onUpdate: (self) => {
       let opacityProgress = self.progress;
-      // console.log(opacityProgress);
       heroH2.style.opacity = 1 - opacityProgress;
     },
   });
 
-  // const cardDiv = document.querySelector('.');
-  // ScrollTrigger.create({
-  //   trigger: cardDiv,
-  //   // start: 'top top',
-  //   // end: '+=300vh',
-  //   id: 'btn-portfolio',
-  //   markers: true,
-  //   // scrub: 1,
-  //   toggleClass: 'active',
-  // });
-
   $('.portfolio .hero').on('scroll', function () {
     let scrollPosition = $(this).scrollTop();
-    // console.log(scrollPosition);
   });
 
-  // console.log($('.check').offset().top);
-
-  // $(window).on('scroll', function () {
-  //   const scrollAmount = $(window).scrollTop();
-  //   const checkScrollamount = $('.check').offset().top;
-  //   const contactScrollamount = $('.contact').offset().top;
-  //   console.log(scrollAmount);
-
-  //   if (scrollAmount >= checkScrollamount) {
-  //     btnPortfolio.addClass('active');
-  //   } else {
-  //     btnPortfolio.removeClass('active');
-  //   }
-  // });
   // portfolio f
 
-  // 메뉴 섹션마다 색 바꾸기
+  // 메뉴 섹션마다  메뉴 색 바꾸기 s
   const $menu = $('.gnb > li');
   const sectionEl = gsap.utils.toArray('section');
   const liEl = gsap.utils.toArray('.gnb > li');
@@ -159,9 +114,9 @@ $(function () {
       className: 'active',
     },
   });
+  // 메뉴 섹션마다  메뉴 색 바꾸기 f
 
-  // top버튼
-
+  // top버튼 s
   // 대상을 변수에 저장
   const $sideDot = $('.indicator button');
   const $section = $('#container > section');
@@ -237,5 +192,4 @@ $(function () {
     moveSection(secIdx);
   });
 });
-
-// 바 색상 바꾸기
+// top버튼 f

@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
           scrub: true,
           onUpdate: (self) => {
             let progress = self.progress;
-            let newWidth = 30 + 70 * progress;
+            let newWidth = 30 + 50 * progress;
             gsap.to(imgContainer, {
               width: newWidth + '%',
               duration: 0.1,

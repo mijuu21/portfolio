@@ -13,6 +13,11 @@ body {
   padding: 0;
   color: #fff;
 }
+html,
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 img {
   width: 100%;
   height: 100%;
@@ -45,7 +50,7 @@ a {
   left: 0;
   width: 0%;
   height: 100%;
-  background: #fff;
+  background: #9e9e9e;
   transition: 0.4s;
 }
 
@@ -86,7 +91,7 @@ header {
 
 /* 마우스 호버 시 색상 변경 */
 .nav ul li a:hover {
-  color: #18a27d; /* 원하는 호버 시 색상으로 변경 */
+  color: #dd7e30; /* 원하는 호버 시 색상으로 변경 */
 }
 .gnb li {
   mix-blend-mode: difference;
@@ -98,7 +103,7 @@ header {
 }
 /* 배경이 흰색일때 메뉴를 호버시 바뀌는색상 */
 .nav ul li.active a:hover {
-  color: #f0f; /* 원하는 호버 시 색상으로 변경 */
+  color: #dd7e30; /* 원하는 호버 시 색상으로 변경 */
 }
 /* 네비게이션 바 스타일 f*/
 /* 섹션 스타일 (예시로 home, gradient-bg, about, portfolio, contact) */
