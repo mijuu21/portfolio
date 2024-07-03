@@ -3,14 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   font-family: 'Pretendard';
   overflow-x: hidden;
+  background: #000;
 }
 .container {
   width: 100%;
   height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Helvetica93-ExtendedBlack', sans-serif; /* 제목 폰트 설정 */
 }
 
 h1 {
@@ -30,11 +40,27 @@ img {
   object-fit: cover;
 }
 
-.hero {
+/* .hero {
   width: 100vw;
   height: 100vh;
   background: url(../img/por2.png) no-repeat 50% 50%;
   background-size: cover;
+} */
+.hero {
+  width: 100vw;
+  height: 100vh;
+  /* background: url(../img/por2.png) no-repeat 50% 50%; */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero h1 {
+  position: relative; /* 텍스트가 비디오 위에 겹쳐지도록 상대 위치 지정 */
+  font-size: 200px;
+  color: white;
+  text-align: center;
+  z-index: 1; /* 텍스트가 비디오 위에 보이도록 설정 */
 }
 .footer {
   width: 100vw;
@@ -67,6 +93,8 @@ img {
   gap: 2em;
   height: 150px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  padding: 20px;
 }
 
 .service-info {
